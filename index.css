@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@400;500;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Spartan', sans-serif;
+}
+
+body {
+    /* border: 2px solid red; */
+    padding: 6rem;
+}
+
+
+
+
+
+.mainGrid {
+    display: grid;
+    grid-template-areas: "subGrid1"
+                          "subGrid2";
+}
+
+.subGrid1 {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    grid-template-areas: "intro--container rating--container";
+    grid-area: subGrid1;    
+}
+
+.intro--container {
+    padding: 1.3rem 3.3rem 3.3rem 0;
+    grid-area: intro--container;
+}
+
+.intro--h1 {
+    color: hsl(300, 43%, 22%);
+    font-weight:700;
+    font-size: 2.7rem;
+}
+
+.intro--body {
+    color:hsl(303, 10%, 53%);
+    font-weight: 500;
+    margin-top: 0.4rem;
+    line-height: 1.5;
+}
+
+.rating--container {
+    padding-top: 1.3rem;
+    grid-area: rating--container;
+}
+
+.rating {
+    font-weight: 700;
+    color: hsl(300, 43%, 22%);
+    margin-left: 1.7rem;
+}
+
+.rating__box {
+    background-color: hsl(300, 24%, 96%);
+    padding: 0.9rem;
+    margin: 1rem;
+    border-radius: 8px;
+    width: 80%;
+    text-align: left;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    /* justify-content: center; */
+}
+
+.rating__box--2 {
+    margin-left: 10%;
+}
+
+.rating__box--3 {
+    margin-left: 20%;
+}
+
+.subGrid2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "card--1 card--2 card--3";
+    grid-area: subGrid2;
+    margin-top: 1.2rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card {
+    /* border: 2px solid red; */
+    background-color: hsl(300, 43%, 22%);
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin: 1rem;
+}
+
+.image__div {
+    width: 80px;
+    height: 80px;
+    background-repeat: no-repeat;
+    border-radius: 100px;
+}
+
+.colton {
+    background-image: url(./images/image-colton.jpg);
+}
+
+.irene {
+    background-image: url(./images/image-irene.jpg);
+}
+
+.anne {
+    background-image: url(./images/image-anne.jpg);
+}
+
+
+
+.imageAndName__flex__container {
+    display: flex;
+    align-items: center;
+    margin-top: 0.9rem;
+    margin-bottom: 1.7rem;
+}
+
+.name__verifiedBuyer {
+    margin-left: 2rem;
+}
+
+.card__customerName {
+    font-weight: 700;
+    color: white;
+    margin-bottom: 0.47rem;
+}
+
+.card__verifiedBuyer {
+    font-weight: 500;
+    color: hsl(333, 80%, 67%);
+}
+
+.card__testimonial {
+    color: white;
+}
+
+.card--1 {
+    grid-area: card--1;
+    margin-left: 0;
+}
+
+.card--2 {
+    grid-area: card--2;
+    margin-top: 5rem;
+}
+
+.card--3 {
+    grid-area: card--3;
+    margin-right: 0;
+    margin-top: 8rem;
+}
+
+
+@media screen and (max-width: 1100px) {
+    /* body {
+        background-color: green;
+    } */
+    body {
+        padding: 1rem;
+        text-align: center;
+        padding-top: 3.5rem;
+    }
+    .subGrid1 {
+        grid-template-areas: "intro--container"
+                              "rating--container";
+        grid-template-columns: 1fr;
+    }
+
+    .intro--container {
+        padding: 1rem;
+    }
+
+    .intro--body {
+        margin-top: 1.7rem;
+    }
+    .rating__box {
+        width: 95%;
+        flex-direction: column;
+    }
+    .rating__box--2 {
+        margin-left: 1rem;
+    }
+    .rating__box--3 {
+        margin-left: 1rem;
+    }
+    .subGrid2 {
+        grid-template-areas: "card--1"
+                              "card--2"
+                              "card--3";
+        grid-template-columns: 1fr;
+        
+    }
+    .card {
+        margin: 1rem;
+    }
+}
+
